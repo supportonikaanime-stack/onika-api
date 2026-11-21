@@ -114,7 +114,7 @@ app.get('/api/anime-images', rateLimit, async (req, res) => {
     // Shikimori's external-ID endpoint may expose a TVDB ID, depending on the record.
     const shikiUrl = `https://shikimori.io/api/animes/${encodeURIComponent(shikimoriId)}`;
     const shiki = await fetchJson(shikiUrl, {
-      headers: { 'User-Agent': 'OnikaAnime/1.0 (artwork lookup)' }
+      headers: { 'User-Agent': 'OnikaAnime/1.1 (artwork lookup)' }
     });
     const tvdbId = shiki?.external_links?.find(link => /thetvdb\.com/i.test(link?.url || ''))?.url?.match(/\/(\d+)(?:\/|$)/)?.[1]
       || shiki?.tvdb_id
