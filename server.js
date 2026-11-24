@@ -94,7 +94,7 @@ async function upsertRows(rows) {
 
 async function readCatalogPage(cacheKey) {
   const encoded = encodeURIComponent(cacheKey);
-  const rows = await supabase(shikimori_catalog_cache?select=*&cache_key=eq.${encoded}&limit=1);
+  const rows = await supabase('shikimori_catalog_cache?select=*&cache_key=eq.${encoded}&limit=1');
   return rows[0] || null;
 }
 
