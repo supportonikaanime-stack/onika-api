@@ -74,7 +74,7 @@ async function supabase(path, options = {}) {
     }
   });
   const text = await response.text();
-  if (!response.ok) throw new Error(Supabase ${response.status}: ${text.slice(0, 500)});
+  if (!response.ok) throw new Error('Supabase ${response.status}: ${text.slice(0, 500)}');
   return text ? JSON.parse(text) : null;
 }
 
