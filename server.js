@@ -141,8 +141,8 @@ app.get('/api/anime/:id', async (req, res) => {
     if (fresh) return res.json(cached);
 
     const [anime, screenshots] = await Promise.all([
-      shiki(/animes/${id}),
-      shiki(/animes/${id}/screenshots).catch(() => [])
+      shiki('/animes/${id}'),
+      shiki('/animes/${id}/screenshots).catch(() => []')
     ]);
     const row = toRow(anime, Array.isArray(screenshots) ? screenshots : []);
     await upsertRows([row]);
