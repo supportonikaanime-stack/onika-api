@@ -108,7 +108,7 @@ async function saveCatalogPage(cacheKey, payload) {
 
 async function shiki(path) {
   const normalizedPath = String(path).replace(/^\/+/, '');
-  const url = new URL(${SHIKIMORI_API}/${normalizedPath});
+  const url = new URL('${SHIKIMORI_API}/${normalizedPath}');
   const response = await fetch(url, {
     headers: { Accept: 'application/json', 'User-Agent': 'OnikaAnime/1.0' }
   });
