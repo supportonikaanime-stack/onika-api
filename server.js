@@ -112,7 +112,7 @@ async function shiki(path) {
   const response = await fetch(url, {
     headers: { Accept: 'application/json', 'User-Agent': 'OnikaAnime/1.0' }
   });
-  if (!response.ok) throw new Error(Shikimori ${response.status});
+  if (!response.ok) throw new Error('Shikimori ${response.status}');
   return response.json();
 }
 
