@@ -6,7 +6,7 @@ const PORT = Number(process.env.PORT || 10000);
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const SHIKIMORI_API = 'https://shikimori.io/api';
-const CACHE_TTL_MS = 1000  60  60  6;
+const CACHE_TTL_MS = 1000 * 60 * 60 * 6;
 
 app.use(cors({ origin: true }));
 app.use(express.json({ limit: '100kb' }));
