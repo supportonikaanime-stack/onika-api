@@ -36,7 +36,7 @@ function cleanText(value) {
 function imageUrl(value) {
   if (!value) return null;
   if (typeof value === 'string') {
-    return value.startsWith('http') ? value : https://shikimori.io${value};
+    return value.startsWith('http') ? value : 'https://shikimori.io${value}';
   }
   return value.original || value.preview || value.x96 || null;
 }
