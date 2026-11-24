@@ -120,7 +120,7 @@ function validCatalogPath(path) {
   let url;
   try {
     const normalizedPath = String(path).replace(/^\/+/, '');
-    url = new URL(${SHIKIMORI_API}/${normalizedPath});
+    url = new URL('${SHIKIMORI_API}/${normalizedPath}');
   } catch {
     return false;
   }
