@@ -64,7 +64,7 @@ function toRow(anime, screenshots = []) {
 }
 
 async function supabase(path, options = {}) {
-  const response = await fetch(${SUPABASE_URL}/rest/v1/${path}, {
+  const response = await fetch('${SUPABASE_URL}/rest/v1/${path}', {
     ...options,
     headers: {
       apikey: SERVICE_KEY,
