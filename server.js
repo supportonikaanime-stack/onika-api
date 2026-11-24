@@ -198,4 +198,4 @@ app.get('/api/catalog', async (req, res) => {
 });
 
 app.get('/health', (_req, res) => res.json({ ok: true }));
-app.listen(PORT, () => console.log(Onika API listening on ${PORT}));
+app.listen(PORT, () => console.log('Onika API listening on ${PORT})');
