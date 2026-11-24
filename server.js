@@ -80,7 +80,7 @@ async function supabase(path, options = {}) {
 
 async function readRows(ids) {
   if (!ids.length) return [];
-  return supabase(anime_catalog?select=&shikimori_id=in.(${ids.join(',')}));
+  return supabase('anime_catalog?select=&shikimori_id=in.(${ids.join(',')})');
 }
 
 async function upsertRows(rows) {
